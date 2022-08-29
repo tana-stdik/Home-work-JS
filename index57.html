@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Привет! HW57</h1>
+
+  <p id="p1"></p>
+  <script>
+   /* Задание 57:
+    Пишем функцию, которая исходя из текущего дня недели пишет (можно в консоле): 
+   "Сегодня" +  dayOfTheWeek, Например: "Сегодня  Вторник".*/
+
+   const d = new Date();
+let day = d.getDay()
+document.getElementById("p1").innerHTML = "Сегодня " + day;
+
+console.log(day);
+
+function outputDayOfTheWeek(){
+  if(day==0){
+    console.log('Сегодня Воскресенье');}
+    else if(day==1){
+    console.log('Сегодня Понедельник');}
+    else if(day==2){
+    console.log('Сегодня Вторник');}
+    else if(day==3){
+    console.log('Сегодня Среда');}
+    else if (day==4){
+    console.log('Сегодня Четверг');}
+    else if(day==5){
+    console.log('Сегодня Пятница');}
+    else
+    console.log('Суббота');
+}
+
+outputDayOfTheWeek();
+  </script>
+</body>
+
+</html>

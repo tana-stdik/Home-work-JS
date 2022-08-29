@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Привет! HW58</h1>
+
+  <h2 id="id1">Hello World</h2>
+
+  <p id="p1">Hello!</p>
+
+  <button type="button" onclick="outputDayOfTheWeek()">
+    Output Day!</button>
+
+  <button type="button" onclick="delBorder()">
+    Delete Border!</button>
+
+  <script>
+    /* Задание 58: 
+   А теперь пишем маленькую html страничку с параграфом с текстом "Hello World" и двумя кнопками, первая кнопка 
+   при нажатии  вызывает функцию из Задания 57 и меняет текст параграфа на результат функции, а вторая кнопка при 
+   нажатии добавляет границу вокруг параграфа, либо, если граница уже есть, убирает ее.*/
+
+    const d = new Date();
+    let day = d.getDay();
+
+    console.log(day);
+
+    function outputDayOfTheWeek() {
+      if (day == 0) {
+        document.getElementById("p1").innerHTML = "Сегодня Воскресенье";
+      } else if (day == 1) {
+        document.getElementById("p1").innerHTML = "Сегодня Понедельник";
+      } else if (day == 2) {
+        document.getElementById("p1").innerHTML = "Сегодня Вторник";
+      } else if (day == 3) {
+        document.getElementById("p1").innerHTML = "Сегодня Среда";
+      } else if (day == 4) {
+        document.getElementById("p1").innerHTML = "Сегодня Четверг";
+      } else if (day == 5) {
+        document.getElementById("p1").innerHTML = "Сегодня Пятница";
+      } else {
+        document.getElementById("p1").innerHTML = "Сегодня Суббота";
+      }
+    }
+
+    /**/
+    var isBord = false;
+
+    function delBorder() {
+      if (isBord) {
+        document.getElementById("id1").style.border = 'none';
+        isBord = false;
+      } else {
+        document.getElementById("id1").style.border = '2px solid red';
+        isBord = true;
+      }
+    }
+  </script>
+</body>
+
+</html>

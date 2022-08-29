@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styleHW64.css">
+  <title>DOM (Document Object Model)</title>
+</head>
+
+<body>
+
+  <h1> HW64</h1>
+
+  <div class="blok-row">
+    <div class="blok-head">
+      <div class="foto">
+        <p>Фото</p>
+      </div>
+      <div class="left-text">
+        <div class="bord-bottom">
+          <p id="age">Возраст:</p>
+        </div>
+        <div class="bord-bottom">
+          <p id="eye-color">Цвет_глаз:</p>
+        </div>
+      </div>
+    </div>
+    <div class="bord-bottom">
+      <p id="first-name">Имя:</p>
+    </div>
+    <div class="bord-bottom">
+      <p id="last-name">Фамилия:</p>
+    </div>
+    <div class="button">
+      <button type="button" onclick="fillingForm()">
+        Ввод</button>
+    </div>
+  </div>
+
+
+  <script>
+    /*Задание 64:
+У нас есть следующий объект:
+const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+Ваша задача сделать html страницу с рамкой как на картинке. Изначально строчки 
+незаполненные. При нажатии на кнопку, на странице появляются данные из объекта в 
+соответствующих местах. */
+
+    const person = {
+     firstName: "John",
+      lastName: "Doe",
+      age: 50,
+      eyeColor: "blue"
+    };
+
+    function fillingForm(){
+      document.getElementById("age").innerHTML = ('Возраст: ' + person.age);
+      document.getElementById("eye-color").innerHTML = ('Цвет_глаз: ' + person.eyeColor);
+      document.getElementById("first-name").innerHTML = ('Имя: ' + person.firstName);
+      document.getElementById("last-name").innerHTML = ('Фамилия: ' + person.lastName);
+}
+
+  </script>
+</body>
+
+</html>

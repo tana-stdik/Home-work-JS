@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HW67</title>
+</head>
+
+<body>
+  <h1>HW 68</h1>
+  <script>
+    /*Задание 69:
+Напишите функцию JavaScript, чтобы проверить, содержит ли объект заданное свойство. 
+*/
+
+    const user = {
+      name: "Tom",
+      age: 26,
+      print: function () {
+        console.log(this.name);
+        console.log(this.age);
+      }
+    };
+    const hasNameProp = "name" in user;
+    console.log(hasNameProp);
+
+    const hasWeightProp = "weight" in user;
+    console.log(hasWeightProp);
+    /**/
+  </script>
+
+</body>
+
+</html>

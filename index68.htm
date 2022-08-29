@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HW68</title>
+</head>
+
+<body>
+<h1>HW 68</h1>
+<script >
+  /*Задание 68:
+Напишите программу на JavaScript, чтобы получить объем цилиндра с четырьмя знаками после запятой, используя классы объектов.
+Volume of a cylinder : V = πr2h
+where r is the radius and h is the height of the cylinder.*/
+
+const cylinder = {
+   radius: 10,
+   height: 10,
+ };
+
+ let volumeCylinder = Math.PI * cylinder.radius * cylinder.radius * cylinder.height;
+ console.log("Oбъем цилиндра = " + volumeCylinder.toFixed(4)); 
+</script>
+
+</body>
+
+</html>

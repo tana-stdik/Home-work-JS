@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Привет! HW59</h1>
+  
+    <button onclick="imgBig()">Button</button>>
+ 
+  <img id="id1" src="https://cdn.pixabay.com/photo/2018/05/04/16/50/cat-3374422_1280.jpg" alt="cat">
+  
+  <script>
+    /* Задание 59:
+Пишем маленькую html страничку с картинкой 50px на 50 px и кнопкой, при нажатии на кнопку, картинка увеличивается 
+и становится 400 на 400px.*/
+var isSmall = true;
+function imgBig(){
+  if (isSmall) {
+        document.getElementById("id1").style.width = '400px';
+        document.getElementById("id1").style.height = '400px';
+        isSmall = false;
+      } else {
+        document.getElementById("id1").style.width = '40px';
+        document.getElementById("id1").style.height = '40px';
+        isSmall = true;
+      }
+    }
+//onclick = document.getElementById("imgBig").style.width = '400px' higth = '400px';
+  </script>
+</body>
+
+</html>

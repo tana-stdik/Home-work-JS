@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Привет! HW52</h1>
+  <script>
+    //1)Пишем array состоящий из 5 строк (string). пишем в консоль каждый из элементов
+
+let array1 = [[1 , 2 , 3 , 4 , 5] , 
+[6,7,8,9,],
+[10,11,12],
+[13,14],
+[15]]; 
+
+console.log(array1);
+console.log(array1[0]);
+console.log(array1[1]);
+console.log(array1[2]);
+console.log(array1[3]);
+console.log(array1[4]);
+console.log(array1 [1][0]);
+
+/*2) А теперь пишем это внутри функции которая принимает переменную. И если эта переменная 
+типа число, выводим с помощью консоля содержимое этого места в array. (например x=2, array[x]), 
+а если не типа число то пишем "Not a number" в консоле.*/
+
+let array2 = [[1 , '2' , 3 , '4' , 5] , 
+['six',7,'8',9,],
+['10',11,'12'],
+[13,'14'],
+[15]]; 
+/*let a = 0;
+let b = 0;
+var output = function(){ return array1[a][b]; }
+console.log(greeting()); 
+if(typeof array1[a][b] == "number")*/
+
+var output = function(){
+  if (typeof array2[1][1] == "number"){
+    console.log(array2[1][2]);
+  } else {
+	console.log("Not a number");
+}
+    }
+//console.log(output()); 
+  </script>
+</body>
+
+</html>

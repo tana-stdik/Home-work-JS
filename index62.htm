@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1>Hello There! HW62</h1>
+
+  <button type="button" onclick="changeText()">
+    Change Text!</button>
+
+  <script>
+    /*Задание 62: (кавычки можно не показывать)
+Напишите HTML страницу, на которой есть кнопка и заголовок с Текстом ("Hello There"). При нажатии на кнопку в первый раз 
+текст меняется на "Hello First", при нажатии во второй раз, меняется на "Hello Second" , при нажатии в третий раз на "Hello Third".  
+При нажатии в четвертый снова на    "Hello First" и так далее.*/
+
+    let counter = 0;
+    let header = ['First', 'Second', 'Third'];
+
+    function changeText() {
+      let elements = document.getElementsByTagName('h1');
+      for (i = 0; i < elements.length; i++) {
+        elements[i].innerHTML = "Hello " + header[counter % header.length];
+        console.log(i);
+      }
+      counter++;
+    } /**/
+  </script>
+</body>
+
+</html>

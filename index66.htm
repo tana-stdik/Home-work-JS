@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HW66</title>
+</head>
+
+<body>
+  
+  <script>
+  /*Напишите программу JavaScript для получения списка свойств объекта JavaScript. 2мя способами. 
+  1 с использованием Object.keys(), а другой без его использования.
+  var student = {
+  name : "David Rayy",
+  sclass : "VI",
+  rollno : 12 };
+  Sample Output: name,sclass,rollno*/
+  
+  var student = {
+    name : "David Rayy",
+    sclass : "VI",
+    rollno : 12 };
+  
+    let keysStudent = Object.keys(student);
+       console.log(keysStudent);
+  
+  const markup = (student) => {
+    return `
+    <div>
+    <p> ${keysStudent} </p>
+    </div>
+    `;
+  };
+  
+  const main = document.createElement("main");
+  main.innerHTML = markup(student);
+  document.body.appendChild(main);/**/
+  
+  for (let key in student) {
+    console.log(key);
+  }
+
+</script>
+</body>
+
+</html>
